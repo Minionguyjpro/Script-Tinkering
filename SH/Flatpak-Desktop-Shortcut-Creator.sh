@@ -1,6 +1,6 @@
 #!/bin/sh
 # Set desktop folder to variable desktopfolder and check whether Xdg-user-dirs is installed for it to work properly
-desktopfolder=`xdg-user-dir DESKTOP > /dev/null 2>&1`
+desktopfolder=`xdg-user-dir DESKTOP`
 if [ $? -eq 127 ]
 then
    echo "Xdg-user-dirs is not installed! Please install it using your package manager."
