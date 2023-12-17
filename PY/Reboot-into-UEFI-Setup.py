@@ -26,7 +26,7 @@ def reboot_to_uefi_macos():
 # Main function to reboot into UEFI based on the current platform
 def reboot_to_uefi():
     current_platform = platform.system()
-    if current_platform == "Windows":
+    if current_platform == "Windows" and platform.release() >= "6.2":
         reboot_to_uefi_windows()
     elif current_platform == "Linux":
         reboot_to_uefi_linux()
